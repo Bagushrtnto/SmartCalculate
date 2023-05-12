@@ -44,23 +44,23 @@ if (selected == "Home") :
 if (selected == 'Perhitungan pengenceran') :
     st.title('Perhitungan pengenceran')
 
-    volume_awal = st.number_input ("Masukkan nilai volume awal (mL)", min_value = 0)
-    konsentrasi_awal = st.number_input ("Masukkan nilai konsentrasi awal (mg/L)", min_value = 0)
-    volume_akhir = st.number_input ("Masukkan nilai volume akhir (mL)", min_value = 0)
-    konsentrasi_akhir = st.number_input ("Masukkan nilai konsentrasi akhir (mg/L)", min_value = 0)
+    volume_awal = st.number_input ("Masukkan nilai volume awal", min_value = 0)
+    konsentrasi_awal = st.number_input ("Masukkan nilai konsentrasi awal", min_value = 0)
+    volume_akhir = st.number_input ("Masukkan nilai volume akhir", min_value = 0)
+    konsentrasi_akhir = st.number_input ("Masukkan nilai konsentrasi akhir", min_value = 0)
     hitung = st.button ("Perhitungan volume")
 
     if hitung :
         volume = (volume_akhir * konsentrasi_akhir) / konsentrasi_awal
-        st.write ("Nilai volume pengenceran (mL) adalah = ", volume)
-        st.success (f"Nilai volume pengenceran (mL) adalah = {volume}")
+        st.write ("Nilai volume pengenceran adalah = ", volume)
+        st.success (f"Nilai volume pengenceran adalah = {volume}")
     
     hitung = st.button ("perhitungan konsentrasi")
 
     if hitung :
         konsentrasi = volume_akhir * konsentrasi_akhir / volume_awal
-        st.write ("Nilai konsentrasi pengenceran (mg/mL) adalah = ", konsentrasi)
-        st.success (f"Nilai konsentrasi pengenceran (mg/mL) adalah = {konsentrasi}")
+        st.write ("Nilai konsentrasi pengenceran adalah = ", konsentrasi)
+        st.success (f"Nilai konsentrasi pengenceran adalah = {konsentrasi}")
 
 # halaman hitung gram dalam ppm
 if (selected == 'Hitung gram dalam ppm') :
@@ -79,7 +79,7 @@ if (selected == 'Hitung gram dalam ppm') :
 if (selected == 'Hitung gram dalam Normalitas') :
     st.title('Hitung gram dalam Normalitas')
 
-    ppm = st.number_input ("Masukkan nilai Normalitas (grek/L)", min_value = 0.00000)
+    Normalitas = st.number_input ("Masukkan nilai Normalitas (grek/L)", min_value = 0.00000)
     labu_takar = st.number_input ("Masukkan nilai volume labu takar (L)", min_value = 0.0000)
     BE = st.number_input ("Masukkan nilai BE (g/grek)", min_value = 0.0000)
     hitung = st.button ("Hitung gram dalam Normalitas")
