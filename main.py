@@ -79,9 +79,9 @@ if (selected == 'Hitung gram dalam ppm') :
 if (selected == 'Hitung gram dalam Normalitas') :
     st.title('Hitung gram dalam Normalitas')
 
-    Normalitas = st.number_input ("Masukkan nilai Normalitas (grek/L)", min_value = 0.00000)
-    labu_takar = st.number_input ("Masukkan nilai volume labu takar (L)", min_value = 0.0000)
-    BE = st.number_input ("Masukkan nilai BE (g/grek)", min_value = 0.0000)
+    Normalitas = st.number_input ("Masukkan nilai Normalitas (grek/L)", min_value = 0.00)
+    labu_takar = st.number_input ("Masukkan nilai volume labu takar (L)", min_value = 0.00)
+    BE = st.number_input ("Masukkan nilai BE (g/grek)", min_value = 0.00)
     hitung = st.button ("Hitung gram dalam Normalitas")
 
     if hitung :
@@ -93,9 +93,9 @@ if (selected == 'Hitung gram dalam Normalitas') :
 if (selected == 'Hitung gram dalam Molaritas') :
     st.title('Hitung gram dalam Molaritas')
 
-    Molaritas = st.number_input ("Masukkan nilai Molaritas (mol/L)", min_value = 0.00000)
-    labu_takar = st.number_input ("Masukkan nilai volume labu takar (L)", min_value = 0.0000)
-    BM = st.number_input ("Masukkan nilai BM (g/mol)", min_value = 0.0000)
+    Molaritas = st.number_input ("Masukkan nilai Molaritas (mol/L)", min_value = 0.00)
+    labu_takar = st.number_input ("Masukkan nilai volume labu takar (L)", min_value = 0.00)
+    BM = st.number_input ("Masukkan nilai BM (g/mol)", min_value = 0.00)
     hitung = st.button ("Hitung gram dalam Molaritas")
 
     if hitung :
