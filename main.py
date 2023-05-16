@@ -8,9 +8,9 @@ with st.sidebar :
     selected = option_menu ('Aplikasi Pembuatan Larutan',
     ['Home',
     'Perhitungan pengenceran',
-    'Hitung gram dalam ppm',
-    'Hitung gram dalam Normalitas',
-    'Hitung gram dalam Molaritas'],
+    'Hitung massa dalam ppm',
+    'Hitung massa dalam Normalitas',
+    'Hitung massa dalam Molaritas'],
     default_index=0)
 
 # halaman home
@@ -44,10 +44,10 @@ if (selected == "Home") :
 if (selected == 'Perhitungan pengenceran') :
     st.title('Perhitungan pengenceran')
 
-    volume_awal = st.number_input ("Masukkan nilai volume awal", min_value = 0.0)
-    konsentrasi_awal = st.number_input ("Masukkan nilai konsentrasi awal", min_value = 0)
-    volume_akhir = st.number_input ("Masukkan nilai volume akhir", min_value = 0)
-    konsentrasi_akhir = st.number_input ("Masukkan nilai konsentrasi akhir", min_value = 0)
+    volume_awal = st.number_input ("Masukkan nilai volume awal (mL)", min_value = 0.0)
+    konsentrasi_awal = st.number_input ("Masukkan nilai konsentrasi awal (mg/L)", min_value = 0)
+    volume_akhir = st.number_input ("Masukkan nilai volume akhir (mL)", min_value = 0)
+    konsentrasi_akhir = st.number_input ("Masukkan nilai konsentrasi akhir (mg/L)", min_value = 0)
     hitung = st.button ("Perhitungan volume")
 
     if hitung :
@@ -63,42 +63,42 @@ if (selected == 'Perhitungan pengenceran') :
         st.success (f"Nilai konsentrasi pengenceran adalah = {konsentrasi}")
 
 # halaman hitung gram dalam ppm
-if (selected == 'Hitung gram dalam ppm') :
-    st.title('Hitung gram dalam ppm')
+if (selected == 'Hitung massa dalam ppm') :
+    st.title('Hitung massa dalam ppm')
 
     ppm = st.number_input ("Masukkan nilai ppm (mg/L)", min_value = 0.0000)
-    labu_takar = st.number_input ("Masukkan nilai labu takar (mL)", min_value = 0.00)
-    hitung = st.button ("Hitung gram dalam ppm")
+    labu_takar = st.number_input ("Masukkan nilai volume labu takar (mL)", min_value = 0.00)
+    hitung = st.button ("Hitung massa dalam ppm")
 
     if hitung :
-        gram = ppm * labu_takar / 1000
-        st.write ("Nilai gram dalam ppm (gram) adalah = ", gram)
-        st.success (f"Nilai gram dalam ppm (gram) adalah = {gram}")
+        massa = ppm * labu_takar / 1000
+        st.write ("Nilai massa dalam ppm (massa) adalah = ", massa)
+        st.success (f"Nilai massa dalam ppm (massa) adalah = {massa}")
 
 # halaman hitung gram dalam Normalitas
-if (selected == 'Hitung gram dalam Normalitas') :
-    st.title('Hitung gram dalam Normalitas')
+if (selected == 'Hitung massa dalam Normalitas') :
+    st.title('Hitung massa dalam Normalitas')
 
     Normalitas = st.number_input ("Masukkan nilai Normalitas (grek/L)", min_value = 0.00)
     labu_takar = st.number_input ("Masukkan nilai volume labu takar (L)", min_value = 0.00)
     BE = st.number_input ("Masukkan nilai BE (g/grek)", min_value = 0.00)
-    hitung = st.button ("Hitung gram dalam Normalitas")
+    hitung = st.button ("Hitung massa dalam Normalitas")
 
     if hitung :
-        gram = Normalitas * labu_takar * BE
-        st.write ("Nilai gram dalam Normalitas (gram) adalah = ", gram)
-        st.success (f"Nilai gram dalam Normalitas (gram) adalah = {gram}")
+        massa = Normalitas * labu_takar * BE
+        st.write ("Nilai massa dalam Normalitas (massa) adalah = ", gram)
+        st.success (f"Nilai massa dalam Normalitas (massa) adalah = {gram}")
 
 # halaman hitung gram dalam Molaritas
-if (selected == 'Hitung gram dalam Molaritas') :
-    st.title('Hitung gram dalam Molaritas')
+if (selected == 'Hitung massa dalam Molaritas') :
+    st.title('Hitung massa dalam Molaritas')
 
     Molaritas = st.number_input ("Masukkan nilai Molaritas (mol/L)", min_value = 0.00)
     labu_takar = st.number_input ("Masukkan nilai volume labu takar (L)", min_value = 0.00)
     BM = st.number_input ("Masukkan nilai BM (g/mol)", min_value = 0.00)
-    hitung = st.button ("Hitung gram dalam Molaritas")
+    hitung = st.button ("Hitung massa dalam Molaritas")
 
     if hitung :
-        gram = Molaritas * labu_takar * BM
-        st.write ("Nilai gram dalam Molaritas (gram) adalah = ", gram)
-        st.success (f"Nilai gram dalam Molaritas (gram) adalah = {gram}")
+        massa = Molaritas * labu_takar * BM
+        st.write ("Nilai massa dalam Molaritas (massa) adalah = ", massa)
+        st.success (f"Nilai massa dalam Molaritas (massa) adalah = {massa}")
