@@ -44,7 +44,7 @@ if (selected == "Home") :
 if (selected == 'Perhitungan pengenceran') :
     st.title('Perhitungan pengenceran')
 
-    volume_awal = st.number_input ("Masukkan nilai volume awal", min_value = 0)
+    volume_awal = st.number_input ("Masukkan nilai volume awal", min_value = 0,0)
     konsentrasi_awal = st.number_input ("Masukkan nilai konsentrasi awal", min_value = 0)
     volume_akhir = st.number_input ("Masukkan nilai volume akhir", min_value = 0)
     konsentrasi_akhir = st.number_input ("Masukkan nilai konsentrasi akhir", min_value = 0)
