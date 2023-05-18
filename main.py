@@ -44,6 +44,7 @@ if (selected == "Home") :
 if (selected == 'Perhitungan pengenceran') :
     st.title('Perhitungan pengenceran')
     st.markdown('''V1 x C1 = V2 x C2''')
+    st.markdown('''Didalam ini kita dapat menghitung volume atau konsentrasi dari suatu pengenceran larutan. Dalam hal ini konsentrasi larutan bisa dihitung dalam satuan Normalitas (N), Molaritas (M), ataupun ppm (mg/L) dengan satuan volume mL maupun L.''')
 
     volume_awal = st.number_input ("Masukkan nilai volume awal (mL)", min_value = 0.0)
     konsentrasi_awal = st.number_input ("Masukkan nilai konsentrasi awal (mg/L)", min_value = 0)
@@ -66,6 +67,8 @@ if (selected == 'Perhitungan pengenceran') :
 # halaman hitung gram dalam ppm
 if (selected == 'Hitung massa dalam ppm') :
     st.title('Hitung massa dalam ppm')
+    st.markdown('''Di dalam aplikasi perhitungan massa dalam ppm menggunakan rumus,yaitu:''')
+    st.markdown('''(ppm x Volume) / 1000''')
 
     ppm = st.number_input ("Masukkan nilai ppm (mg/L)", min_value = 0.0000)
     labu_takar = st.number_input ("Masukkan nilai volume (L)", min_value = 0.00)
@@ -79,6 +82,9 @@ if (selected == 'Hitung massa dalam ppm') :
 # halaman hitung gram dalam Normalitas
 if (selected == 'Hitung massa dalam Normalitas') :
     st.title('Hitung massa dalam Normalitas')
+    st.markdown('''Di dalam aplikasi perhitungan massa dalam normalitas menggunakan rumus,yaitu:''')
+    st.markdown('''N x Volume x BE''')
+
 
     Normalitas = st.number_input ("Masukkan nilai Normalitas (grek/L)", min_value = 0.0000)
     labu_takar = st.number_input ("Masukkan nilai volume (L)", min_value = 0.00)
@@ -93,6 +99,9 @@ if (selected == 'Hitung massa dalam Normalitas') :
 # halaman hitung gram dalam Molaritas
 if (selected == 'Hitung massa dalam Molaritas') :
     st.title('Hitung massa dalam Molaritas')
+    st.markdown('''Di dalam aplikasi perhitungan massa dalam molaritas menggunakan rumus,yaitu:''')
+    st.markdown('''M x Volume x BM''')
+
 
     Molaritas = st.number_input ("Masukkan nilai Molaritas (mol/L)", min_value = 0.00)
     labu_takar = st.number_input ("Masukkan nilai volume (L)", min_value = 0.00)
