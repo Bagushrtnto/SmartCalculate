@@ -43,6 +43,7 @@ if (selected == "Home") :
 # halaman perhitungan pengenceran
 if (selected == 'Perhitungan pengenceran') :
     st.title('Perhitungan pengenceran')
+    st.markdown('''V1 x C1 = V2 x C2''')
 
     volume_awal = st.number_input ("Masukkan nilai volume awal (mL)", min_value = 0.0)
     konsentrasi_awal = st.number_input ("Masukkan nilai konsentrasi awal (mg/L)", min_value = 0)
