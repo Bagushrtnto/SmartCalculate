@@ -79,7 +79,7 @@ if (selected == 'Hitung massa dalam ppm') :
 if (selected == 'Hitung massa dalam Normalitas') :
     st.title('Hitung massa dalam Normalitas')
 
-    Normalitas = st.number_input ("Masukkan nilai Normalitas (grek/L)", min_value = 0.00)
+    Normalitas = st.number_input ("Masukkan nilai Normalitas (grek/L)", min_value = 0.0000)
     labu_takar = st.number_input ("Masukkan nilai volume (L)", min_value = 0.00)
     BE = st.number_input ("Masukkan nilai BE (g/grek)", min_value = 0.00)
     hitung = st.button ("Hitung massa dalam Normalitas")
