@@ -67,7 +67,7 @@ if (selected == 'Hitung massa dalam ppm') :
     st.title('Hitung massa dalam ppm')
 
     ppm = st.number_input ("Masukkan nilai ppm (mg/L)", min_value = 0.0000)
-    labu_takar = st.number_input ("Masukkan nilai volume labu takar (mL)", min_value = 0.00)
+    labu_takar = st.number_input ("Masukkan nilai volume (L)", min_value = 0.00)
     hitung = st.button ("Hitung massa dalam ppm")
 
     if hitung :
@@ -80,21 +80,21 @@ if (selected == 'Hitung massa dalam Normalitas') :
     st.title('Hitung massa dalam Normalitas')
 
     Normalitas = st.number_input ("Masukkan nilai Normalitas (grek/L)", min_value = 0.00)
-    labu_takar = st.number_input ("Masukkan nilai volume labu takar (L)", min_value = 0.00)
+    labu_takar = st.number_input ("Masukkan nilai volume (L)", min_value = 0.00)
     BE = st.number_input ("Masukkan nilai BE (g/grek)", min_value = 0.00)
     hitung = st.button ("Hitung massa dalam Normalitas")
 
     if hitung :
         massa = Normalitas * labu_takar * BE
-        st.write ("Nilai massa dalam Normalitas (massa) adalah = ", gram)
-        st.success (f"Nilai massa dalam Normalitas (massa) adalah = {gram}")
+        st.write ("Nilai massa dalam Normalitas (massa) adalah = ", massa)
+        st.success (f"Nilai massa dalam Normalitas (massa) adalah = {massa}")
 
 # halaman hitung gram dalam Molaritas
 if (selected == 'Hitung massa dalam Molaritas') :
     st.title('Hitung massa dalam Molaritas')
 
     Molaritas = st.number_input ("Masukkan nilai Molaritas (mol/L)", min_value = 0.00)
-    labu_takar = st.number_input ("Masukkan nilai volume labu takar (L)", min_value = 0.00)
+    labu_takar = st.number_input ("Masukkan nilai volume (L)", min_value = 0.00)
     BM = st.number_input ("Masukkan nilai BM (g/mol)", min_value = 0.00)
     hitung = st.button ("Hitung massa dalam Molaritas")
 
